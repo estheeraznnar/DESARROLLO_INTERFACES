@@ -41,6 +41,15 @@ public class HelloController {
     private Slider slider;
 
     @FXML
+    private Spinner<Integer> spiner;
+
+    @FXML
+    private void initialize(){
+        SpinnerValueFactory<Integer> factory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 50);
+        spiner.setValueFactory(factory);
+    }
+
+    @FXML
     public void setBarraAscendiente(){
         if (barra.getProgress()== 1 )return;
         barra.setProgress(barra.getProgress()+0.25);
