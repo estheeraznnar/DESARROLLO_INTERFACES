@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sliderfoto.HelloController">
+   <children>
+      <Slider fx:id="slider" layoutX="22.0" layoutY="25.0" onMouseDragged="#setFoto" prefHeight="14.0" prefWidth="309.0" />
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="200.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/perro.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
