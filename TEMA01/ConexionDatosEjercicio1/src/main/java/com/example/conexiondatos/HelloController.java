@@ -9,6 +9,10 @@ import javafx.scene.control.TextField;
 import java.sql.*;
 
 public class HelloController {
+    @FXML
+    private Connection con;
+    @FXML
+    private Statement stat;
 
     @FXML
     private ResultSet rs;
@@ -40,9 +44,10 @@ public class HelloController {
         String clave = "1234";
 
 
+
         try {
-            Connection con = DriverManager.getConnection(url, user, clave);
-            Statement stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+            con = DriverManager.getConnection(url, user, clave);
+            stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
             String sql = "select * from datos.empleados";
             rs = stat.executeQuery(sql);
@@ -126,26 +131,38 @@ public class HelloController {
         }
 
     }
-    @FXML
-    private void setNuevo() {
-        String url = "jdbc:mysql://localhost:3306/datos";
-        String user = "root";
-        String clave = "1234";
 
+    @FXML
+    private void setGuardar(){
 
         try {
-            Connection con = DriverManager.getConnection(url, user, clave);
-            PreparedStatement ps = con.prepareStatement("Insert into empleado (nombre, apellido, localizacion, salario) values ?,?,?,?");
+            String sql = "INSERT INTO empleados VALUES (?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, nombre.getText());
             ps.setString(2, apellido.getText());
             ps.setString(3, loc.getText());
-            ps.setString(4,salario.getText());
+            ps.setInt(4,Integer.parseInt(salario.getText()));
+            ps.executeUpdate();
+            stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            String sql1 = "select * from datos.empleados";
+            rs = stat.executeQuery(sql1);
 
 
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
+    }
+
+    @FXML
+    private void setNuevo() {
+
+        nombre.setText("");
+        apellido.setText("");
+        loc.setText("");
+        salario.setText("");
+
     }
 
 

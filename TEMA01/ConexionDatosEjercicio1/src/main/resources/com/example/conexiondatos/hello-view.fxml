@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="445.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.example.conexiondatos.HelloController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conexiondatos.HelloController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="118.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="77.0" />
@@ -84,6 +84,6 @@
          </GridPane.margin>
       </Button>
       <Button fx:id="nuevo" mnemonicParsing="false" onAction="#setNuevo" text="Nuevo Registro" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Button fx:id="guardar" mnemonicParsing="false" text="Guardar" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="guardar" mnemonicParsing="false" onAction="#setGuardar" text="Guardar" GridPane.columnIndex="3" GridPane.rowIndex="3" />
    </children>
 </GridPane>
