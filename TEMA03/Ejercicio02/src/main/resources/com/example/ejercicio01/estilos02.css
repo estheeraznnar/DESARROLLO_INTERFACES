@@ -1,0 +1,19 @@
+.button{
+
+   /* -fx-background-color: #008080;
+    -fx-border-color: #ff6347;*/
+    /*linear-gradient(to (top, right, bottom, left), (color begin), (color finish));*/
+    -fx-background-color: linear-gradient( to top, #b0f2f2, #009191 );
+    -fx-border-color:linear-gradient( to top, #ffb6a9, #9b311e );
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 5px;
+
+    -fx-font-style: noramal;
+    -fx-font-weight: bolder;
+    -fx-font-size: 18px;
+}
+
+.button:hover{
+    -fx-background-color: #009191;
+}
