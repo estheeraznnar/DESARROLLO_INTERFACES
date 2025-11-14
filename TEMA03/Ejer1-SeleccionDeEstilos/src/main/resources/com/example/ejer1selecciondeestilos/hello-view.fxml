@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejer1selecciondeestilos.HelloController">
+   <children>
+      <Label layoutX="119.0" layoutY="70.0" text="Elige un estilo:" />
+      <ComboBox layoutX="214.0" layoutY="66.0" prefWidth="150.0" />
+      <CheckBox fx:id="checkBox" layoutX="119.0" layoutY="125.0" mnemonicParsing="false" stylesheets="@SelecEstilo.css" text="CheckBox" />
+      <RadioButton fx:id="radioButton" layoutX="321.0" layoutY="134.0" mnemonicParsing="false" stylesheets="@SelecEstilo.css" text="RadioButton" />
+      <Slider fx:id="slider" layoutX="119.0" layoutY="182.0" stylesheets="@SelecEstilo.css" />
+      <ToggleButton fx:id="toggleButton" layoutX="289.0" layoutY="174.0" mnemonicParsing="false" stylesheets="@SelecEstilo.css" text="ToggleButton" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="119.0" layoutY="236.0" progress="0.0" stylesheets="@SelecEstilo.css" />
+      <ProgressBar fx:id="progressBar" layoutX="234.0" layoutY="247.0" prefWidth="200.0" progress="0.0" stylesheets="@SelecEstilo.css" />
+   </children>
+</AnchorPane>

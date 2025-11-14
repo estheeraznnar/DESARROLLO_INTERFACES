@@ -1,0 +1,52 @@
+.check-box .box {
+    -fx-background-color: #ff0000;
+    -fx-border-color: black;
+}
+.check-box:selected .mark {
+    -fx-background-color: rgb(43, 255, 0);
+}
+.check-box:selected .box {
+    -fx-background-color: rgb(255, 192, 192);
+}
+
+.radio-button .radio {
+    -fx-background-color: rgb(75, 69, 69);
+}
+.radio-button:selected .radio {
+    -fx-background-color: #ff0080;
+}
+.radio-button:selected .dot {
+    -fx-background-color: #ff69b4;
+}
+
+.toggle-button {
+    -fx-background-color: #7cfff8;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 10px;
+}
+.toggle-button:selected {
+    -fx-background-color: #20726d;
+}
+
+.slider .track {
+    -fx-background-color: green;
+}
+.slider .thumb {
+    -fx-background-color: rgb(255, 115, 0);
+}
+
+.progress-bar .track {
+    -fx-background-color: violet;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+.progress-bar .bar {
+    -fx-background-color: rgb(88, 80, 80);
+}
+
+.progress-indicator {
+ -fx-progress-color: #FF0000;
+}

@@ -6,20 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio03.HelloController">
+<AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio03.HelloController">
    <children>
-      <VBox layoutX="10.0" layoutY="23.0" prefHeight="310.0" prefWidth="319.0">
+      <VBox layoutX="10.0" layoutY="23.0" prefHeight="349.0" prefWidth="319.0">
          <children>
-            <Label prefHeight="17.0" prefWidth="308.0" text="Aplicacion de estilo">
+            <Label prefHeight="55.0" prefWidth="386.0" text="Aplicacion de estilo">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <padding>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="10.0" />
+                  <Insets bottom="10.0" left="55.0" right="55.0" top="10.0" />
                </padding>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="405.0" stylesheets="@estilo1.css" text="Aplicar estilo 1">
+            <Button fx:id="estilo1" mnemonicParsing="false" onAction="#setEstilo1" prefHeight="25.0" prefWidth="405.0" text="Aplicar estilo 1">
                <VBox.margin>
                   <Insets left="25.0" right="25.0" top="10.0" />
                </VBox.margin>
@@ -27,7 +26,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="479.0" stylesheets="@estilo2.css" text="Aplicar estilo 2">
+            <Button fx:id="estilo2" mnemonicParsing="false" onAction="#setEstilo2" prefHeight="25.0" prefWidth="479.0" text="Aplicar estilo 2">
                <VBox.margin>
                   <Insets left="25.0" right="25.0" top="10.0" />
                </VBox.margin>
@@ -35,7 +34,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="427.0" stylesheets="@estilo3.css" text="Aplicar estilo 3">
+            <Button fx:id="estilo3" mnemonicParsing="false" onAction="#setEstilo3" prefHeight="25.0" prefWidth="427.0" text="Aplicar estilo 3">
                <VBox.margin>
                   <Insets left="25.0" right="25.0" top="10.0" />
                </VBox.margin>
@@ -43,7 +42,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="386.0" text="Rastrear">
+            <Button fx:id="resetear" mnemonicParsing="false" onAction="#setResetear" prefHeight="25.0" prefWidth="386.0" text="Rastrear">
                <VBox.margin>
                   <Insets left="25.0" right="25.0" top="10.0" />
                </VBox.margin>
@@ -51,7 +50,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="314.0" text="Salir">
+            <Button fx:id="salir" mnemonicParsing="false" prefHeight="25.0" prefWidth="314.0" text="Salir">
                <VBox.margin>
                   <Insets left="25.0" right="25.0" top="10.0" />
                </VBox.margin>

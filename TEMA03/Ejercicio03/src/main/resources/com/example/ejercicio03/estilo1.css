@@ -1,0 +1,18 @@
+.root{
+    -fx-background-color: #ff4a4a; /*defino el color del fondo*/
+}
+.button{
+    -fx-background-color: #fff45c; /*defino el color de fondo de todos los botones*/
+    -fx-border-color: #fff0f0;
+    -fx-text-fill: #ff7676;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14;
+    -fx-font-style: oblique  ;
+}
+.label{
+    -fx-text-fill: #fff;
+    -fx-font-size: 24;
+    -fx-font-style: oblique  ;
+}
