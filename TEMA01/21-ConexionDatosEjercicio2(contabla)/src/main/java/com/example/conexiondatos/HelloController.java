@@ -166,8 +166,6 @@ public class HelloController {
             String sql1 = "select * from datos.empleados";
             rs = stat.executeQuery(sql1);
 
-
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

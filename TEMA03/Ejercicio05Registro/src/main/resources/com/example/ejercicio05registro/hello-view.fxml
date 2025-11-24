@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="412.0" stylesheets="@estilo05(fondo).css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio05registro.HelloController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="17.0" prefHeight="446.0" prefWidth="382.0" styleClass="root" stylesheets="@estilos05.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="433.0" prefWidth="382.0" stylesheets="@estilos05.css">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="fondo_titulo">
+                     <children>
+                        <Label text="Registro Form">
+                           <HBox.margin>
+                              <Insets top="25.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField promptText="Nombre" styleClass="text_field">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField promptText="Apellido" styleClass="text_field">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField promptText="Email" styleClass="text_field">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField promptText="Contraseña" styleClass="text_field">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField promptText="Confirma la contraseña" styleClass="text_field">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <CheckBox mnemonicParsing="false" text="Acepto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Acepto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="348.0" styleClass="boton" text="Registrar ahora">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+.root{
+    -fx-background-color: #eceaea; /*defino el color del fondo*/
+}
+.fondo_titulo{
+    -fx-background-color: #61baea; /*defino el color del fondo*/
+    -fx-text-fill: #000000;
+    -fx-font-size: 24;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-alignment: top-center;
+}
+     
+.boton{
+    -fx-background-color: #ff4f4f; /*defino el color del fondo*/
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14;
+    
+}
+
+.text_field{
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 5px;
+}

@@ -30,7 +30,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ef1d6648-f1bd-4e1a-a3ac-034174ee6326">
-      <console name="Connection" type="STANDARD" schema="DATOS" session="Main"><![CDATA[select nombre, localidad from empleados where salario >=1200 AND salario <= 1500;]]></console>
+      <console name="Connection" type="STANDARD" schema="DATOS" session="Main" />
     </connection>
     <connection id="a6546b75-8c8c-48fd-8585-3c9d1f16e0f5">
       <console name="Datos" type="STANDARD" schema="datos" session="Main"><![CDATA[select *from datos.empleados;]]></console>
@@ -179,7 +179,7 @@
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="8.4" />
+          <database-version value="9.3" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />

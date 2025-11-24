@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.RangeSlider?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejerciciocontrolfx.HelloController">
+   <children>
+      <SearchableComboBox fx:id="combo" layoutX="24.0" layoutY="14.0" onAction="#setCombo" prefHeight="25.0" prefWidth="370.0" />
+      <TableView fx:id="capitales" layoutX="24.0" layoutY="54.0" prefHeight="219.0" prefWidth="370.0">
+        <columns>
+          <TableColumn fx:id="provincia" prefWidth="139.0" text="Provincia" />
+          <TableColumn fx:id="poblacion" prefWidth="102.0" text="Población" />
+            <TableColumn fx:id="autonomia" prefWidth="128.0" text="Autonomía" />
+        </columns>
+      </TableView>
+      <RangeSlider fx:id="slider" layoutX="23.0" layoutY="292.0" onMouseClicked="#setSlider" onMouseDragged="#setSlider" onMouseMoved="#setSlider" prefHeight="14.0" prefWidth="370.0" />
+   </children>
+</AnchorPane>

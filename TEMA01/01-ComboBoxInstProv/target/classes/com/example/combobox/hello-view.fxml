@@ -43,7 +43,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="res" onAction="#setConf" prefHeight="25.0" prefWidth="266.0">
+                  <TextField fx:id="res" prefHeight="25.0" prefWidth="266.0">
                      <HBox.margin>
                         <Insets left="50.0" top="30.0" />
                      </HBox.margin>
