@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="706.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.example.examenestheraznar.HelloController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="0.0" prefWidth="8.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="320.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="499.0" minWidth="10.0" prefWidth="358.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="73.0" minWidth="10.0" prefWidth="24.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="107.0" minHeight="9.0" prefHeight="60.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="321.0" minHeight="0.0" prefHeight="68.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="228.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="228.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="228.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="108.0" GridPane.columnIndex="1">
+        <menus>
+          <Menu mnemonicParsing="false" text="Gestion">
+            <items>
+              <MenuItem fx:id="nuevo" mnemonicParsing="false" onAction="#setNuevo" text="Nuevo empleado" />
+                  <MenuItem fx:id="guardar" mnemonicParsing="false" onAction="#setGuardar" text="Guardar Empleado" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Desplazamiento">
+            <items>
+              <MenuItem fx:id="primero" mnemonicParsing="false" onAction="#principio" onMenuValidation="#principio" text="Primer Registro" />
+                  <MenuItem fx:id="anterior" mnemonicParsing="false" onAction="#izquierda" text="Registro Anterior" />
+                  <MenuItem fx:id="siguiente" mnemonicParsing="false" onAction="#derecha" text="Registro Siguiente" />
+                  <MenuItem fx:id="ultimo" mnemonicParsing="false" onAction="#alfinal" text="Ultimo Registro" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Listados">
+            <items>
+              <MenuItem fx:id="tabla" mnemonicParsing="false" onAction="#setTabla" text="Empleados" />
+            </items>
+          </Menu>
+        </menus>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </MenuBar>
+      <HBox prefHeight="51.0" prefWidth="274.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label text="Nombre: ">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombre">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="237.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label text="Fecha Nacimiento: ">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fechaNacimiento">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Label text="Sexo: ">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <RadioButton fx:id="hombre" mnemonicParsing="false" text="Hombre">
+                     <font>
+                        <Font name="Cambria Math" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mujer" mnemonicParsing="false" text="Mujer">
+                     <font>
+                        <Font name="Cambria Math" size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="51.0" prefWidth="274.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Label text="Departamento: ">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_departamento" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="51.0" prefWidth="274.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Label text="Salario: ">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSalario">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
