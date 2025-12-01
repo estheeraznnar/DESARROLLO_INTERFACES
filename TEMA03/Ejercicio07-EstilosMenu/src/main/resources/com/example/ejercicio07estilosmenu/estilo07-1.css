@@ -1,0 +1,39 @@
+.button {
+    -fx-background-color:
+        rgba(0,0,0,0.08),
+        linear-gradient(#5aaf83, #516d5d),
+        linear-gradient(#c5ffd9 0%,#cefbe1 10%, #a5fbc6 50%, #88fbac 51%, #d5ffdd 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
+}
+
+.menu-bar {
+ -fx-background-color: #dbdbff;
+}
+
+.menu-bar .menu:hover {
+ -fx-background-color: #ffc0c0;
+}
+
+.menu-bar .menu:showing {
+ -fx-background-color: #ffc0c0;
+}
+
+.menu-item {
+ -fx-background-color: #ceceff;
+}
+
+.menu-item:hover {
+ -fx-background-color: #bdffbd;
+}
+
+.label{
+
+     -fx-font-style: noramal;
+    -fx-font-weight: bolder;
+    -fx-font-size: 12px;
+
+}
