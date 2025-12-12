@@ -1,0 +1,51 @@
+.label-principal{
+    -fx-background-color: rgba(255, 255, 255, 0.774);
+    -fx-text-fill: blue;
+    -fx-font-size: 15px;
+    -fx-font-style: Arial;
+}
+
+.label-etiquetas{
+    -fx-background-color: rgba(255, 84, 84, 0.774);
+    -fx-font-style: Arial;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.slider .track {
+    -fx-background-color: rgba(0, 162, 255, 0.795);
+}
+.slider .thumb {
+    -fx-background-color: rgb(1, 112, 70);
+}
+
+.toggle-button {
+    -fx-background-color:
+        rgba(0,0,0,0.08),
+        linear-gradient(#ffffff, #ffffff),
+        linear-gradient(#003cff 0%,#3c69ff 10%, #8ba6ff 50%, #91abf8 51%, #ffffff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-background-radius: 10px;
+    -fx-border-width: 5px;
+    
+    -fx-text-fill: rgb(160, 255, 160);
+    -fx-font-size: 14px;
+}
+.toggle-button:hover {
+    -fx-background-color:
+        rgba(0,0,0,0.08),
+        linear-gradient(#ffffff, #ffffff),
+        linear-gradient(#ff0000 0%,#ff3c3c 10%, #ff8b8b 50%, #f89191 51%, #ffffff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-background-radius: 10px;
+    -fx-border-width: 5px;
+    
+    -fx-text-fill: rgb(160, 255, 160);
+    -fx-font-size: 14px;
+}
+
+.progress-indicator {
+ -fx-progress-color: #FF0000;
+}
