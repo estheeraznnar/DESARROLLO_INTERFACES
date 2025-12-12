@@ -1,43 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio08togglebutton.HelloController">
    <children>
-      <VBox layoutX="14.0" layoutY="14.0" prefHeight="224.0" prefWidth="189.0">
+      <VBox layoutX="29.0" layoutY="44.0" prefHeight="312.0" prefWidth="357.0">
          <children>
-            <Label text="Color de fondo" />
-            <HBox prefHeight="62.0" prefWidth="189.0">
+            <HBox prefHeight="25.0" prefWidth="416.0">
                <children>
-                  <Button mnemonicParsing="false" text="Rojo" />
-                  <Button mnemonicParsing="false" text="Verde" />
-                  <Button mnemonicParsing="false" text="Azul" />
+                  <Label text="Color de fondo" />
                </children>
             </HBox>
-            <Label text="Tipo de letra" />
-            <HBox prefHeight="62.0" prefWidth="189.0">
+            <HBox prefHeight="70.0" prefWidth="357.0">
                <children>
-                  <Button mnemonicParsing="false" text="Verdana" />
-                  <Button mnemonicParsing="false" text="Tahoma" />
-                  <Button mnemonicParsing="false" text="Courier" />
+                  <ToggleButton fx:id="red" mnemonicParsing="false" onAction="#rojo" text="Rojo">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="color" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="green" mnemonicParsing="false" onAction="#verde" text="Verde" toggleGroup="$color">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="blue" mnemonicParsing="false" onAction="#azul" text="Azul" toggleGroup="$color">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
                </children>
             </HBox>
-            <Label text="Tamaño de texto" />
-            <HBox prefHeight="39.0" prefWidth="189.0">
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="416.0">
                <children>
-                  <Button mnemonicParsing="false" text="10" />
-                  <Button mnemonicParsing="false" text="20" />
-                  <Button mnemonicParsing="false" text="30" />
+                  <Label text="Tipo de letra" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="35.0" prefHeight="73.0" prefWidth="357.0">
+               <children>
+                  <ToggleButton fx:id="verdana" mnemonicParsing="false" onAction="#verd" text="Verdana">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fuente" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="tahoma" mnemonicParsing="false" onAction="#taho" text="Tahoma" toggleGroup="$fuente">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="courier" mnemonicParsing="false" onAction="#cour" text="Courier" toggleGroup="$fuente">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="25.0" prefWidth="416.0">
+               <children>
+                  <Label text="Tamaño de texto" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="115.0" prefHeight="73.0" prefWidth="357.0">
+               <children>
+                  <ToggleButton fx:id="t10" mnemonicParsing="false" onAction="#tam10" text="10">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tamano" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="t20" mnemonicParsing="false" onAction="#tam20" text="20" toggleGroup="$tamano">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="t30" mnemonicParsing="false" onAction="#tam30" text="30" toggleGroup="$tamano">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ToggleButton>
                </children>
             </HBox>
          </children>
       </VBox>
-      <TextArea layoutX="203.0" layoutY="14.0" prefHeight="209.0" prefWidth="206.0" text="Lorem ipsum dolor sit amet, &#10;consectetur adipiscing elit. Morbi &#10;ut convallis dui. Duis elementum &#10;consequat rutrum. Fusce id enim&#10;scelerisque, ullamcorper sapien in, &#10;auctor dui. Suspendisse tempor, &#10;ligula sed blandit consectetur, dui &#10;lectus semper justo, eu venenatis &#10;ante ante tempus est. In blandit&#10;sem tellus, et rhoncus elit &#10;commodo quis." />
+      <HBox layoutX="344.0" layoutY="88.0" prefHeight="229.0" prefWidth="247.0">
+         <children>
+            <Label fx:id="texto" prefHeight="213.0" prefWidth="234.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." wrapText="true" />
+         </children>
+      </HBox>
+      <Button fx:id="ayuda" layoutX="442.0" layoutY="325.0" mnemonicParsing="false" onAction="#setAyuda" text="Ayuda" />
    </children>
 </AnchorPane>

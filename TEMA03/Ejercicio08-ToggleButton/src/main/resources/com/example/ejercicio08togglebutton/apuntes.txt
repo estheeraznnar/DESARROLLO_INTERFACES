@@ -1,0 +1,73 @@
+TEMA 3
+- Cambiar tamaño o fuente
+    XML
+    otected voir
+        etiqueta.setFont(Font.)
+
+    String      fontFamily  = "Arial";
+    double      fontSize    = 13;
+    FontWeight  fontWeight  = FontWeight.BOLD;
+    FontPosture fontPosture = FontPosture.ITALIC;
+
+    Font font1 = Font.font(fontFamily);
+    Font font2 = Font.font(fontSize);
+    Font font3 = Font.font(fontFamily, fontSize);
+    Font font4 = Font.font(fontFamily, fontWeight , fontSize);
+    Font font5 = Font.font(fontFamily, fontPosture, fontSize);
+    Font font6 = Font.font(fontFamily, fontWeight , fontPosture, fontSize)
+
+- Numero aleatorio
+    Conseguir un número aleatorio entre 1 y 200
+    Integer numero = (int) (Math.random() * 200) + 1;
+
+- ListSelectionView
+    Encabezados de cada columna:
+        lista.setSourceHeader(new Label("Disponibles"));
+        lista.setTargetHeader(new Label("Seleccionados"));
+    Añadir elementos a la primera columna:
+        lista.getSourceItems().add("Uno");
+        lista.getSourceItems().add("Dos");
+        lista.getSourceItems().add("Tres");
+
+TEMA 5
+- Help
+    nuevo pry vacio
+    ajustes automatizados
+    administrar la tabla con lo de hijo
+    generar ayuda
+    en chm
+    abrir ruta del archivo
+    ponerlo en una carpeta aparte con los .ico .png .jar y esas cosa
+    ponerlo en la carpeta del proyecto
+- Para el boton
+    Desktop.getDestktop().borowse(new URI("jfdh.chm"));
+
+TEMA 6
+- Hacer el finero jar pero antes hay que hacer el louncher
+- Lounch4j
+    poner el output file y el jar
+    poner en Icon el icono que sea con .ico
+    Output file:
+        fichero de extensión .exe con el nombre y la ubicación que establezca el usuario
+        Jar: fichero .jar generado en Intellij
+    datle a la ruleta para generar el ejecutable
+- Inno
+    1- Name aplicarion
+    2- allow user to change
+    3- .jar, allow, carpeta con los .ico
+    4- sin marcar nada
+    5- igual
+    6- igual
+    7- non admini
+    8- delete y delete
+    9- spanish
+    10- donde quiero que se guarde, icono para el instalable .ico
+    11- yes
+    instalador es mysetup.exe
+- Modificar el script
+    mirar que sale el setupiconFile debajo de OutputBaseFilname en el primer parrafo,
+        sino meter la ruta ej: C:/Users/USUARIO/Downloads/icono.ico
+    añadir iconfilname
+        en [Icons], en el primero anadir IconFilename: "{app}\icono.ico"
+            en el segundo añadir lo mismo
+    guardar y ejecutar

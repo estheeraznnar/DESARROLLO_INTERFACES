@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.ejercicio01aplicacioncalculos.HelloController">
+
+  <!-- MenuBar -->
+  <MenuBar>
+    <Menu text="Archivo">
+      <MenuItem fx:id="menuSalir" onAction="#handleSalir" text="Salir" />
+    </Menu>
+    <Menu text="Editar">
+      <MenuItem fx:id="menuLimpiar" onAction="#handleLimpiar" text="Limpiar" />
+    </Menu>
+    <Menu text="Ayuda">
+      <MenuItem fx:id="menuPdf" onAction="#handleAyudaPdf" text="Pdf" />
+      <MenuItem fx:id="menuChm" onAction="#handleAyudaChm" text="Chm" />
+      <MenuItem fx:id="menuWeb" onAction="#handleAyudaWeb" text="Web" />
+    </Menu>
+  </MenuBar>
+
+  <!-- Contenido principal -->
+  <GridPane hgap="10" vgap="10" alignment="CENTER">
+    <padding>
+      <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Número 1 -->
+    <Label text="Número 1" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="txtNumero1"
+               promptText="Introduce un número"
+               GridPane.columnIndex="1" GridPane.rowIndex="0">
+      <tooltip>
+        <Tooltip text="Introduce un número"/>
+      </tooltip>
+    </TextField>
+
+    <!-- Número 2 -->
+    <Label text="Número 2" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="txtNumero2"
+               promptText="Introduce un número"
+               GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <tooltip>
+        <Tooltip text="Introduce un número"/>
+      </tooltip>
+    </TextField>
+
+    <!-- Resultado -->
+    <Label text="Resultado" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="txtResultado"
+               editable="false"
+               promptText="="
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- Botones -->
+    <Button fx:id="btnSumar"
+            text="Sumar"
+            prefWidth="100"
+            onAction="#handleSumar"
+            GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <tooltip>
+        <Tooltip text="Sumar los dos números"/>
+      </tooltip>
+    </Button>
+
+    <Button fx:id="btnRestar"
+            text="Restar"
+            prefWidth="100"
+            onAction="#handleRestar"
+            GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <tooltip>
+        <Tooltip text="Restar los dos números"/>
+      </tooltip>
+    </Button>
+
+    <Button fx:id="btnMultiplicar"
+            text="Multiplicar"
+            prefWidth="210"
+            onAction="#handleMultiplicar"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"
+            GridPane.columnSpan="2">
+      <tooltip>
+        <Tooltip text="Multiplicar los dos números"/>
+      </tooltip>
+    </Button>
+
+  </GridPane>
+
+</VBox>
