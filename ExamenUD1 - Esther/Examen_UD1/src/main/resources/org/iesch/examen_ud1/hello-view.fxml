@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.examen_ud1.HelloController">
+   <children>
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Gestion">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevoRegistro" text="Nuevo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#guardar" text="Guardar Empleado" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Desplazamiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#primero" text="Primer Registro" />
+                  <MenuItem mnemonicParsing="false" onAction="#retroceder" text="Registro Anterior" />
+                  <MenuItem mnemonicParsing="false" onAction="#avanzar" text="Registro Siguiente" />
+                  <MenuItem mnemonicParsing="false" onAction="#ultimo" text="Ultimo Registro" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Listados">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#tabla" text="Empleados" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField layoutX="-97.0" layoutY="-74.0" />
+      <HBox layoutX="-2.0" layoutY="26.0" prefHeight="377.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="377.0" prefWidth="295.0">
+               <children>
+                  <Label text="Nombre: ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Fecha Nacimiento:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="90.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Sexo:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Departamento:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Salario:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="377.0" prefWidth="313.0">
+               <children>
+                  <TextField fx:id="tNombre" editable="false">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <DatePicker fx:id="dFecha" disable="true" prefHeight="25.0" prefWidth="315.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="40.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <HBox prefHeight="82.0" prefWidth="309.0">
+                     <children>
+                        <RadioButton fx:id="rbMasculino" disable="true" mnemonicParsing="false" text="Masculino">
+                           <HBox.margin>
+                              <Insets left="40.0" top="45.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexo" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbFemenino" disable="true" mnemonicParsing="false" text="Femenino" toggleGroup="$sexo">
+                           <HBox.margin>
+                              <Insets left="40.0" top="45.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <ComboBox fx:id="comboDep" disable="true" prefHeight="25.0" prefWidth="384.0">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="tSalario" editable="false">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
