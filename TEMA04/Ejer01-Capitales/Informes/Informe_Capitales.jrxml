@@ -1,0 +1,68 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Informe_Capitales" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af5ff4c5-06c9-4a1c-b91b-a42899f65317">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion Capitales"/>
+	<query language="SQL"><![CDATA[select * from capitales.capitales]]></query>
+	<field name="Provincia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.label" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Autonomía" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.label" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Población" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Población"/>
+		<property name="com.jaspersoft.studio.field.label" value="Población"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<sortField name="Autonomía"/>
+	<group name="agrupar_autonomia">
+		<expression><![CDATA[$F{Autonomía}]]></expression>
+		<groupHeader>
+			<band height="50">
+				<element kind="textField" uuid="ed26b38e-ec61-41cb-9d3a-dd91f10501fd" mode="Opaque" x="60" y="0" width="470" height="30" forecolor="#ED2821" backcolor="#CCCCCC" fontName="Serif" fontSize="16.0" hTextAlign="Left" vTextAlign="Middle">
+					<expression><![CDATA[$F{Autonomía}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a139166-7959-419e-b52e-c004e5b7aa7e"/>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="62" splitType="Stretch">
+		<element kind="staticText" uuid="aa987c6e-d36c-4601-a0b9-c68a6a5838c7" x="80" y="10" width="400" height="40" forecolor="#278245" fontName="Broadway" fontSize="33.0" italic="true" underline="true" bold="false" hTextAlign="Center">
+			<text><![CDATA[Informe Capitales]]></text>
+		</element>
+	</title>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="c1b42bf4-d959-482a-af20-6b5e416740a1" x="205" y="7" width="185" height="30" fontName="Serif" fontSize="19.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Provincia]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e450d548-f467-4520-abd4-d0d97b87f4cd"/>
+		</element>
+		<element kind="staticText" uuid="5f391d3e-0c94-44b1-b42e-3cf2cebe4cea" x="20" y="7" width="185" height="30" fontName="Serif" fontSize="19.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[Autonomía]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a139166-7959-419e-b52e-c004e5b7aa7e"/>
+		</element>
+		<element kind="staticText" uuid="8ec40c7d-0272-41e6-86da-ffee1adf90e1" x="390" y="7" width="140" height="30" fontName="Serif" fontSize="19.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Población]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df2001bd-a966-4436-80bd-c8a0346f736d"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<element kind="textField" uuid="22e89d5b-2286-4c78-b88a-0a9bf129de45" x="205" y="0" width="185" height="30" forecolor="#636363" fontName="Serif" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Provincia}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e450d548-f467-4520-abd4-d0d97b87f4cd"/>
+			</element>
+			<element kind="textField" uuid="a8c1d939-0cba-4806-8581-1143a5e791a6" x="390" y="0" width="140" height="30" forecolor="#636363" fontName="Serif" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Población}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df2001bd-a966-4436-80bd-c8a0346f736d"/>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
