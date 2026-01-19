@@ -21,6 +21,8 @@ public class HelloController {
     @FXML
     private RadioButton normal;
     @FXML
+    private Button conTabla;
+    @FXML
     private RadioButton agrupado;
     @FXML
     private Button mostrar;
@@ -37,7 +39,8 @@ public class HelloController {
         String pass = "1234";
 
         try {
-            con = DriverManager.getConnection(url, user, pass);
+
+
 
             Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
@@ -81,5 +84,14 @@ public class HelloController {
             JasperPrint jp = JasperFillManager.fillReport(jr,param,con);
             JasperViewer.viewReport(jp,false);
         }
+    }
+
+    @FXML
+    private void setConTabla() throws JRException {
+        String fileRepo = "Informes/Informe_Capitales_Tabla.jasper";
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, null, con);
+        JasperViewer viewer = new JasperViewer(jpRepo,false);
+        viewer.setTitle("TITULO INFORME");
+        viewer.setVisible(true);
     }
 }
