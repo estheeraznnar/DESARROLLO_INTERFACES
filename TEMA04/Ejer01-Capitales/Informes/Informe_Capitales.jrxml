@@ -2,6 +2,7 @@
 <jasperReport name="Informe_Capitales" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af5ff4c5-06c9-4a1c-b91b-a42899f65317">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion Capitales"/>
+	<parameter name="Ruta_imagen" class="java.lang.String"/>
 	<query language="SQL"><![CDATA[select * from capitales.capitales]]></query>
 	<field name="Provincia" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="Provincia"/>
@@ -34,9 +35,12 @@
 		</groupFooter>
 	</group>
 	<background splitType="Stretch"/>
-	<title height="62" splitType="Stretch">
-		<element kind="staticText" uuid="aa987c6e-d36c-4601-a0b9-c68a6a5838c7" x="80" y="10" width="400" height="40" forecolor="#278245" fontName="Broadway" fontSize="33.0" italic="true" underline="true" bold="false" hTextAlign="Center">
+	<title height="76" splitType="Stretch">
+		<element kind="staticText" uuid="aa987c6e-d36c-4601-a0b9-c68a6a5838c7" x="80" y="10" width="400" height="40" forecolor="#278245" fontName="Broadway" fontSize="33.0" italic="true" bold="false" underline="true" hTextAlign="Center">
 			<text><![CDATA[Informe Capitales]]></text>
+		</element>
+		<element kind="image" uuid="bcfe1d6c-8ef7-483c-a8bf-c96581afb6ae" x="0" y="13" width="50" height="50">
+			<expression><![CDATA[$P{Ruta_imagen}]]></expression>
 		</element>
 	</title>
 	<columnHeader height="61" splitType="Stretch">
@@ -44,7 +48,7 @@
 			<text><![CDATA[Provincia]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e450d548-f467-4520-abd4-d0d97b87f4cd"/>
 		</element>
-		<element kind="staticText" uuid="5f391d3e-0c94-44b1-b42e-3cf2cebe4cea" x="20" y="7" width="185" height="30" fontName="Serif" fontSize="19.0" underline="true" bold="true" hTextAlign="Center">
+		<element kind="staticText" uuid="5f391d3e-0c94-44b1-b42e-3cf2cebe4cea" x="20" y="7" width="185" height="30" fontName="Serif" fontSize="19.0" bold="true" underline="true" hTextAlign="Center">
 			<text><![CDATA[Autonomía]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a139166-7959-419e-b52e-c004e5b7aa7e"/>
 		</element>

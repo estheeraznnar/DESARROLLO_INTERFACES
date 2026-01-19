@@ -6,12 +6,12 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
-      <assistant-state connection-id="3fcaacf1-4973-407e-8452-ba002db7a77e" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+      <assistant-state connection-id="d8925f49-6102-410e-b83a-6a55cfba4421" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
         <conversations />
       </assistant-state>
     </assistants>
@@ -23,20 +23,18 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3fcaacf1-4973-407e-8452-ba002db7a77e">
-      <console name="Connection" type="STANDARD" schema="capitales" session="Main"><![CDATA[select * from capitales.capitales where autonomía LIKE 'Andalucía';]]></console>
+    <connection id="d8925f49-6102-410e-b83a-6a55cfba4421">
+      <console name="Connection 1" type="STANDARD" schema="datos" session="Main"><![CDATA[select * from datos.empleados;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="3fcaacf1-4973-407e-8452-ba002db7a77e" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3fcaacf1-4973-407e-8452-ba002db7a77e" />
+    <connection id="d8925f49-6102-410e-b83a-6a55cfba4421" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -55,7 +53,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection source-id="" id="3fcaacf1-4973-407e-8452-ba002db7a77e" active="true" signed="true">
+      <connection source-id="" id="d8925f49-6102-410e-b83a-6a55cfba4421" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -68,7 +66,7 @@
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="capitales" />
+          <database value="datos" />
           <tns-folder value="" />
           <tns-profile value="" />
           <server-type value="" />

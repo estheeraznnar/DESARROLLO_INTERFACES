@@ -2,6 +2,7 @@
 <jasperReport name="Informe_Capitales_SinOrdenar" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94630e76-0907-4cb7-b601-460e0e409fd3">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion Capitales"/>
+	<parameter name="Ruta_imagen" class="java.lang.String"/>
 	<query language="SQL"><![CDATA[select * from capitales.capitales]]></query>
 	<field name="Provincia" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="Provincia"/>
@@ -23,17 +24,20 @@
 		<element kind="staticText" uuid="35b7e6c9-6a9c-47c0-9724-8a7cc497aac2" x="60" y="20" width="430" height="30" forecolor="#158241" fontName="Broadway" fontSize="25.0" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Informe Capitales (sin ordenar)]]></text>
 		</element>
+		<element kind="image" uuid="68e0e0fc-6543-46e3-b18f-dba4e0feb716" x="0" y="10" width="50" height="50">
+			<expression><![CDATA[$P{Ruta_imagen}]]></expression>
+		</element>
 	</title>
 	<columnHeader height="45" splitType="Stretch">
-		<element kind="staticText" uuid="7c471072-1063-4a2c-8994-d88159dfdea6" x="0" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" underline="true" bold="true" hTextAlign="Center">
+		<element kind="staticText" uuid="7c471072-1063-4a2c-8994-d88159dfdea6" x="0" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" bold="true" underline="true" hTextAlign="Center">
 			<text><![CDATA[Provincia]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f253345f-a9bb-4fbb-9c64-04b822ea29e4"/>
 		</element>
-		<element kind="staticText" uuid="3027f8c3-02ed-4c7e-bfcc-ebe107cfe7b7" x="185" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" underline="true" bold="true" hTextAlign="Center">
+		<element kind="staticText" uuid="3027f8c3-02ed-4c7e-bfcc-ebe107cfe7b7" x="185" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" bold="true" underline="true" hTextAlign="Center">
 			<text><![CDATA[Autonomía]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6766221-c86b-4457-8360-24b82dff45be"/>
 		</element>
-		<element kind="staticText" uuid="9c13a15f-f200-486f-ae5b-1b4b53a73842" x="370" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" underline="true" bold="true" hTextAlign="Center">
+		<element kind="staticText" uuid="9c13a15f-f200-486f-ae5b-1b4b53a73842" x="370" y="0" width="185" height="30" fontName="Serif" fontSize="16.0" bold="true" underline="true" hTextAlign="Center">
 			<text><![CDATA[Población]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46f24e66-d2db-4e7f-8788-1bb143604529"/>
 		</element>
