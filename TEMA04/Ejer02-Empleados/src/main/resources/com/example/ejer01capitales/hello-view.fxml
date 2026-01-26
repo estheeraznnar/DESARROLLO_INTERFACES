@@ -7,7 +7,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejer01capitales.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejer01capitales.HelloController">
    <children>
       <Label layoutX="36.0" layoutY="44.0" text="Selecciona la localidad para el informe" />
       <ComboBox fx:id="localidad" layoutX="266.0" layoutY="40.0" prefWidth="150.0" />
@@ -16,6 +16,8 @@
             <ToggleGroup fx:id="informe" />
          </toggleGroup></RadioButton>
       <RadioButton fx:id="agrupado" layoutX="62.0" layoutY="103.0" mnemonicParsing="false" text="Informe agrupado" toggleGroup="$informe" />
-      <Button fx:id="mostrar" layoutX="112.0" layoutY="134.0" mnemonicParsing="false" onAction="#setMostrar" text="Mostrar informe" />
+      <Button fx:id="mostrar" layoutX="290.0" layoutY="81.0" mnemonicParsing="false" onAction="#setMostrar" text="Mostrar informe" />
+      <Button fx:id="calcular" layoutX="281.0" layoutY="120.0" mnemonicParsing="false" onAction="#camposCalculados" text="Campos Calculados" />
+      <Button fx:id="calcularagrupado" layoutX="255.0" layoutY="154.0" mnemonicParsing="false" onAction="#camposCalculadosAgrupados" text="Campos Calculados Agrupado" />
    </children>
 </AnchorPane>

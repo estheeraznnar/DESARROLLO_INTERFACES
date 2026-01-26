@@ -10,6 +10,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public class HelloController {
 
@@ -27,6 +28,10 @@ public class HelloController {
     @FXML
     private Button mostrar;
     @FXML
+    private Button listadoPoblacionJrxml;
+    @FXML
+    private Button listadoPoblacionJasper;
+    @FXML
     private TextField poblaMin;
     @FXML
     private TextField poblaMax;
@@ -40,7 +45,7 @@ public class HelloController {
 
         try {
 
-
+            con = DriverManager.getConnection(url, user, pass);
 
             Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
@@ -86,10 +91,46 @@ public class HelloController {
         }
     }
 
+
+
     @FXML
     private void setConTabla() throws JRException {
+        String valorselect = autonomia.getValue();
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("autonomia", valorselect);
         String fileRepo = "Informes/Informe_Capitales_Tabla.jasper";
-        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, null, con);
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
+        JasperViewer viewer = new JasperViewer(jpRepo,false);
+        viewer.setTitle("TITULO INFORME");
+        viewer.setVisible(true);
+    }
+
+    @FXML
+    private void setListadoPoblacionJrxml() throws JRException {
+        double valormin = Double.parseDouble(poblaMin.getText());
+        double valormax = Double.parseDouble(poblaMax.getText());
+
+        //HashMap<String, Object> param = new HashMap<>();
+        //param.put("Ruta_imagen", "file:Images/Pezazul.png");
+        JasperDesign d = JRXmlLoader.load("Informes/Listado_Poblacion.jrxml");
+        JRDesignQuery jq = new JRDesignQuery();
+        jq.setText("SELECT * FROM capitales.capitales where población Between '" + valormin + "' and '" + valormax + "';");
+        d.setQuery(jq);
+        JasperReport jr = JasperCompileManager.compileReport(d);
+        JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
+        JasperViewer.viewReport(jp,false);
+
+    }
+
+    @FXML
+    private void setListadoPoblacionJasper() throws JRException {
+        Integer valormin = Integer.valueOf(poblaMin.getText());
+        Integer valormax = Integer.valueOf(poblaMax.getText());
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("ValorMin", valormin);
+        parametros.put("ValorMax", valormax);
+        String fileRepo = "Informes/Listado_Poblacion.jasper";
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
         JasperViewer viewer = new JasperViewer(jpRepo,false);
         viewer.setTitle("TITULO INFORME");
         viewer.setVisible(true);

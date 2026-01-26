@@ -8,7 +8,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejer01capitales.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejer01capitales.HelloController">
    <children>
       <Label layoutX="36.0" layoutY="44.0" text="Selecciona la autonomia para el informe" />
       <ComboBox fx:id="autonomia" layoutX="266.0" layoutY="40.0" prefWidth="150.0" />
@@ -18,10 +18,12 @@
          </toggleGroup></RadioButton>
       <RadioButton fx:id="agrupado" layoutX="62.0" layoutY="103.0" mnemonicParsing="false" text="Informe agrupado" toggleGroup="$informe" />
       <Button fx:id="mostrar" layoutX="278.0" layoutY="82.0" mnemonicParsing="false" onAction="#setMostrar" text="Mostrar informe" />
-      <TextField fx:id="poblaMin" layoutX="231.0" layoutY="160.0" />
+      <TextField fx:id="poblaMin" layoutX="25.0" layoutY="198.0" />
       <Label layoutX="25.0" layoutY="153.0" prefHeight="38.0" prefWidth="189.0" text="- Introduce el numero de poblacion minima que quieres buscar" wrapText="true" />
-      <Label layoutX="24.0" layoutY="191.0" prefHeight="38.0" prefWidth="189.0" text="- Introduce el numero de poblacion maxima que quieres buscar" wrapText="true" />
-      <TextField fx:id="poblaMax" layoutX="231.0" layoutY="198.0" />
+      <Label layoutX="24.0" layoutY="229.0" prefHeight="38.0" prefWidth="189.0" text="- Introduce el numero de poblacion maxima que quieres buscar" wrapText="true" />
+      <TextField fx:id="poblaMax" layoutX="25.0" layoutY="269.0" />
       <Button fx:id="conTabla" layoutX="251.0" layoutY="120.0" mnemonicParsing="false" onAction="#setConTabla" text="Mostrar informe con Tabla" />
+      <Button fx:id="listadoPoblacionJrxml" layoutX="258.0" layoutY="160.0" mnemonicParsing="false" onAction="#setListadoPoblacionJrxml" text="Listado Poblacion.jrxml" />
+      <Button fx:id="listadoPoblacionJasper" layoutX="258.0" layoutY="199.0" mnemonicParsing="false" onAction="#setListadoPoblacionJasper" text="Listado Poblacion.jasper" />
    </children>
 </AnchorPane>

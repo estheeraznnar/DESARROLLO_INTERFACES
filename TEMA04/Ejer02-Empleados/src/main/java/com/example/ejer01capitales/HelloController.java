@@ -23,6 +23,10 @@ public class HelloController {
     private RadioButton agrupado;
     @FXML
     private Button mostrar;
+    @FXML
+    private Button calcular;
+    @FXML
+    private Button calcularagrupado;
 
     @FXML
     private void initialize(){
@@ -64,5 +68,27 @@ public class HelloController {
             d.setQuery(jq);
             JasperViewer.viewReport(jp,false);
         }
+    }
+
+    @FXML
+    private void camposCalculados() throws JRException {
+        JasperDesign d = JRXmlLoader.load("Informes/Informe_Empleados_Campos_Calculados.jrxml");
+        JRDesignQuery jq = new JRDesignQuery();
+        jq.setText("SELECT Nombre, Apellidos, Localidad, Salario, Salario*0.85 as SalNeto From datos.empleados");
+        d.setQuery(jq);
+        JasperReport jr = JasperCompileManager.compileReport(d);
+        JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
+        JasperViewer.viewReport(jp,false);
+    }
+
+    @FXML
+    private void camposCalculadosAgrupados() throws JRException {
+        JasperDesign d = JRXmlLoader.load("Informes/Informe_Empleados_Campos_Calculados_Agrupados.jrxml");
+        JRDesignQuery jq = new JRDesignQuery();
+        jq.setText("SELECT Nombre, Apellidos, Localidad, Salario, Salario*0.85 as SalNeto From datos.empleados");
+        d.setQuery(jq);
+        JasperReport jr = JasperCompileManager.compileReport(d);
+        JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
+        JasperViewer.viewReport(jp,false);
     }
 }

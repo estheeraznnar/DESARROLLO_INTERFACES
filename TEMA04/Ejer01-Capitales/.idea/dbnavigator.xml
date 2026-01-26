@@ -24,7 +24,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3fcaacf1-4973-407e-8452-ba002db7a77e">
-      <console name="Connection" type="STANDARD" schema="capitales" session="Main"><![CDATA[select * from capitales.capitales where autonomía LIKE 'Andalucía';]]></console>
+      <console name="Connection" type="STANDARD" schema="capitales" session="Main"><![CDATA[select * from capitales.capitales ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
