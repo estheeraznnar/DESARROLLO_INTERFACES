@@ -32,6 +32,10 @@ public class HelloController {
     @FXML
     private Button listadoPoblacionJasper;
     @FXML
+    private Button listadoConGraficoJasper;
+    @FXML
+    private Button listadoConGraficoSinModificar;
+    @FXML
     private TextField poblaMin;
     @FXML
     private TextField poblaMax;
@@ -130,6 +134,28 @@ public class HelloController {
         parametros.put("ValorMin", valormin);
         parametros.put("ValorMax", valormax);
         String fileRepo = "Informes/Listado_Poblacion.jasper";
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
+        JasperViewer viewer = new JasperViewer(jpRepo,false);
+        viewer.setTitle("TITULO INFORME");
+        viewer.setVisible(true);
+    }
+    @FXML
+    private void setListadoConGraficoJasper() throws JRException{
+        String valorselect = autonomia.getValue();
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("Grafico", valorselect);
+        String fileRepo = "Informes/Informe_Capitales_Grafico_Autonomia.jasper";
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
+        JasperViewer viewer = new JasperViewer(jpRepo,false);
+        viewer.setTitle("TITULO INFORME");
+        viewer.setVisible(true);
+    }
+    @FXML
+    private void setListadoConGraficoSinModificar() throws JRException{
+        String valorselect = autonomia.getValue();
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("Grafico", valorselect);
+        String fileRepo = "Informes/Informe_Capitales_Grafico_Autonomia_Sin_Modificar.jasper";
         JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
         JasperViewer viewer = new JasperViewer(jpRepo,false);
         viewer.setTitle("TITULO INFORME");

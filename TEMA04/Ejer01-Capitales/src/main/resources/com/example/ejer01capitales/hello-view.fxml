@@ -25,5 +25,7 @@
       <Button fx:id="conTabla" layoutX="251.0" layoutY="120.0" mnemonicParsing="false" onAction="#setConTabla" text="Mostrar informe con Tabla" />
       <Button fx:id="listadoPoblacionJrxml" layoutX="258.0" layoutY="160.0" mnemonicParsing="false" onAction="#setListadoPoblacionJrxml" text="Listado Poblacion.jrxml" />
       <Button fx:id="listadoPoblacionJasper" layoutX="258.0" layoutY="199.0" mnemonicParsing="false" onAction="#setListadoPoblacionJasper" text="Listado Poblacion.jasper" />
+      <Button fx:id="listadoConGraficoJasper" layoutX="253.0" layoutY="237.0" mnemonicParsing="false" onAction="#setListadoConGraficoJasper" text="Listado con grafico.jasper" />
+      <Button fx:id="listadoConGraficoSinModificar" layoutX="236.0" layoutY="269.0" mnemonicParsing="false" onAction="#setListadoConGraficoSinModificar" text="Listado con grafico sin modificar" />
    </children>
 </AnchorPane>

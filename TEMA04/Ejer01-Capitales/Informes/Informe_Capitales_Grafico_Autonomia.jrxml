@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Informe_Capitales_Grafico_Autonomia" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c122d11-daed-4662-8438-bd54ae8e7907">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion Capitales"/>
+	<parameter name="Grafico" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[select * from capitales.capitales where Autonomía=$P{Grafico}]]></query>
+	<field name="Provincia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.label" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Autonomía" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.label" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Población" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Población"/>
+		<property name="com.jaspersoft.studio.field.label" value="Población"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="430e162f-9eb1-4541-9965-45d4a6a143cc" x="30" y="0" width="500" height="48" forecolor="#9C0705" fontName="Book Antiqua" fontSize="33.0" italic="true" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Cpitales Grafico]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="32" splitType="Stretch">
+		<element kind="staticText" uuid="244feb7a-165e-4cf0-bd78-11cb302ee091" x="0" y="0" width="185" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Provincia]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="27aa00d1-fcef-4a64-b0ad-548eabe25e02"/>
+		</element>
+		<element kind="staticText" uuid="2b812186-68df-4e20-a3e3-2ecdf48ea371" x="185" y="0" width="185" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Autonomía]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4b52064f-732f-4615-bb41-852f24d6325c"/>
+		</element>
+		<element kind="staticText" uuid="ca4b0e26-d44e-4b34-998b-a653f11781eb" x="370" y="0" width="185" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Población]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="361942fb-040e-4d0e-8e92-5954c8e0bd8b"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<element kind="textField" uuid="5249092c-21b7-429a-8b36-40f7606be549" x="0" y="0" width="185" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Provincia}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="27aa00d1-fcef-4a64-b0ad-548eabe25e02"/>
+			</element>
+			<element kind="textField" uuid="12bdf5fd-5795-4fcf-a6d0-6148d1fea4be" x="185" y="0" width="185" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Autonomía}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4b52064f-732f-4615-bb41-852f24d6325c"/>
+			</element>
+			<element kind="textField" uuid="d8db5c38-5869-4ddd-bca4-d8b310b13208" x="370" y="0" width="185" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Población}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="361942fb-040e-4d0e-8e92-5954c8e0bd8b"/>
+			</element>
+		</band>
+	</detail>
+	<summary height="207" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="d38f703a-03a8-4341-8a41-693e498d3ada" x="10" y="0" width="535" height="200" showLegend="false" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{Provincia}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{Población}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>
