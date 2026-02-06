@@ -21,8 +21,8 @@ public class HelloController {
     private Button EjercicioB;
     @FXML
     private Button EjercicioC;
-    @FXML
-    private ComboBox<String> categoria;
+    //@FXML
+    //private ComboBox<String> categoria;
 
     Connection con;
     private ResultSet rs;
@@ -35,13 +35,13 @@ public class HelloController {
 
         try {
             con = DriverManager.getConnection(url, user, pass);
-            Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            //Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
-            String sql = "select distinct(categoría) from ventas.ventas";
+            /*String sql = "select distinct(categoría) from ventas.ventas";
             rs = statement.executeQuery(sql);
             while (rs.next()){
                 categoria.getItems().add(rs.getString(1));
-            }
+            }*/
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -73,11 +73,11 @@ public class HelloController {
 
     @FXML
     private void setEjercicioC() throws JRException {
-        String valorselect = categoria.getValue();
+       /* String valorselect = categoria.getValue();
         Map<String, Object> parametros = new HashMap<>();
-        parametros.put("Grafico", valorselect);
-        String fileRepo = "Informes/Ej8_CamposCalculados_C.jasper.jasper";
-        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, parametros, con);
+        parametros.put("Grafico", valorselect);*/
+        String fileRepo = "Informes/Ej8_CamposCalculados_C.jasper";
+        JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, null, con);
         JasperViewer viewer = new JasperViewer(jpRepo,false);
         viewer.setTitle("TITULO INFORME");
         viewer.setVisible(true);
