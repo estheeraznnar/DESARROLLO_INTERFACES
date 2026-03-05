@@ -1,0 +1,72 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Informe_Ej8_Capos_Calculados" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4bfc108a-4136-4caa-a54b-48562ec679d0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion Ventas"/>
+	<query language="SQL"><![CDATA[select Nombre, PrecioUnidad, CantidadVendida, PrecioUnidad*CantidadVendida as TotalVentas from ventas.ventas]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="PrecioUnidad" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="CantidadVendida" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.label" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="TotalVentas" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="TotalVentas"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalVentas"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="fa30e748-55b7-4edb-af27-97632bcfc543" x="0" y="10" width="380" height="60" fontName="Constantia" fontSize="25.0" italic="true" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Ejercicio 8 (Campos Calculados)]]></text>
+		</element>
+	</title>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="staticText" uuid="3dc01a11-2855-44bb-8284-718070382c5e" x="0" y="0" width="141" height="30" fontSize="12.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="12d19abf-3338-4676-87e0-c671aa63dafc"/>
+		</element>
+		<element kind="staticText" uuid="78d087bc-e826-4371-9314-aa36a1e6a62f" x="141" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[PrecioUnidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="83666144-5244-4c76-ac66-78a7f23c7ead"/>
+		</element>
+		<element kind="staticText" uuid="a8230f44-3a81-45ee-a9eb-b7bc8e16928d" x="279" y="0" width="138" height="30" hTextAlign="Center">
+			<text><![CDATA[CantidadVendida]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d0a5c3b-29e4-462e-8140-e57a102a9300"/>
+		</element>
+		<element kind="staticText" uuid="c0c321b2-6636-4f7b-9931-56afdac0f957" x="417" y="0" width="138" height="30" fontSize="12.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[TotalVentas]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6923237-ea5c-4025-99e3-bda1f0c12c8f"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<element kind="textField" uuid="3e1c304a-9a42-46db-bfad-dc6b25f7e51b" x="0" y="0" width="141" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="12d19abf-3338-4676-87e0-c671aa63dafc"/>
+			</element>
+			<element kind="textField" uuid="866b8914-3df4-4bbe-845e-a6f3f7a03ecd" x="141" y="0" width="138" height="30" pattern="#,0.00€" hTextAlign="Center">
+				<expression><![CDATA[$F{PrecioUnidad}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="83666144-5244-4c76-ac66-78a7f23c7ead"/>
+			</element>
+			<element kind="textField" uuid="d4230903-2c16-4706-ab27-35f8ac94a9b9" x="279" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{CantidadVendida}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d0a5c3b-29e4-462e-8140-e57a102a9300"/>
+			</element>
+			<element kind="textField" uuid="96460906-6e3e-4641-9462-9342adacf796" x="417" y="0" width="138" height="30" pattern="#,00.00€" hTextAlign="Center">
+				<expression><![CDATA[$F{TotalVentas}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6923237-ea5c-4025-99e3-bda1f0c12c8f"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

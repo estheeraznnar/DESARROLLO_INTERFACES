@@ -1,0 +1,84 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Informe_Datos_Empleados_Grafica" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a3deab0-94f9-4de9-af8b-7c6cea102298">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion empleado"/>
+	<query language="SQL"><![CDATA[select * from datos.empleados]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Apellidos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.label" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Localidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Salario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="d1a68a65-877d-46b2-b118-9491d1bdcb03" x="30" y="0" width="470" height="50" forecolor="#039994" fontName="Book Antiqua" fontSize="33.0" italic="true" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Empleados Grafica]]></text>
+		</element>
+	</title>
+	<columnHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="30982f1e-e9d9-410a-9c7d-2133371723f7" x="0" y="0" width="141" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="24859f4e-9850-4d67-a446-b3ad4ccce5fd"/>
+		</element>
+		<element kind="staticText" uuid="9b3df223-77ca-4913-86cb-fd5008953767" x="141" y="0" width="138" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Apellidos]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2823451b-bbc7-4dbe-9750-8b17d91d2144"/>
+		</element>
+		<element kind="staticText" uuid="9c2dbda2-d8a3-4ca3-92dd-3754ed9e4fb1" x="279" y="0" width="138" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Localidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdfeadc5-ab72-449b-9b72-a26799b7bc77"/>
+		</element>
+		<element kind="staticText" uuid="f914be94-f9e3-4162-8b9d-7e0f72958f4f" x="417" y="0" width="138" height="30" fontSize="14.0" bold="true" underline="true" hTextAlign="Center">
+			<text><![CDATA[Salario]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="117833f6-3326-4f85-a71e-07642a5c197d"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="75b62663-4e53-485a-981e-5b34483d188a" x="0" y="0" width="141" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="24859f4e-9850-4d67-a446-b3ad4ccce5fd"/>
+			</element>
+			<element kind="textField" uuid="e58c5797-3546-4f85-b154-c95c7e7cb526" x="141" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Apellidos}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2823451b-bbc7-4dbe-9750-8b17d91d2144"/>
+			</element>
+			<element kind="textField" uuid="3cb2849d-5a79-4ac4-ba3f-b9c59f2162c9" x="279" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Localidad}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdfeadc5-ab72-449b-9b72-a26799b7bc77"/>
+			</element>
+			<element kind="textField" uuid="d7ced65a-845d-487b-90c9-09daddb15273" x="417" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Salario}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="117833f6-3326-4f85-a71e-07642a5c197d"/>
+			</element>
+		</band>
+	</detail>
+	<summary height="216" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="38fe927d-45ae-4037-93c5-ae4e775fe2f2" x="0" y="0" width="555" height="216" showLegend="false" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{Localidad}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{Salario}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot backcolor="#FFFFFF" categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>

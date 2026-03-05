@@ -1,0 +1,85 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Informe_Empleados_Campos_Calculados" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c26a8ff1-6092-48a9-a52e-1d40bd5ec587">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion empleado"/>
+	<query language="SQL"><![CDATA[select Nombre, Apellidos, Localidad, Salario, Salario*0.85 as SalNeto from datos.empleados]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Apellidos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.label" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Localidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Salario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="SalNeto" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SalNeto"/>
+		<property name="com.jaspersoft.studio.field.label" value="SalNeto"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="95" splitType="Stretch">
+		<element kind="staticText" uuid="37d46b24-a9eb-4079-a7da-257381e3ba78" mode="Transparent" x="30" y="20" width="500" height="40" forecolor="#2E9463" backcolor="#BCCFBA" markup="none" fontName="Serif" fontSize="29.0" underline="true" bold="true" italic="true" hTextAlign="Center">
+			<text><![CDATA[Informe Empleados Campos Calculados]]></text>
+		</element>
+	</title>
+	<columnHeader height="42" splitType="Stretch">
+		<element kind="staticText" uuid="244d6199-353c-447c-ae4b-2ab19cb78c4c" x="0" y="0" width="111" height="30" fontSize="14.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f4f7bc1-3916-4c73-ac1e-63919fa67b35"/>
+		</element>
+		<element kind="staticText" uuid="97f34a86-b2bd-4d36-8fa1-ed1d528609dd" x="111" y="0" width="111" height="30" fontSize="14.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[Apellidos]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="846f5177-ba11-4da2-9119-2ab5d69955c4"/>
+		</element>
+		<element kind="staticText" uuid="90915773-0bfa-4f8c-b418-5c501415a83b" x="222" y="0" width="111" height="30" fontSize="14.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[Localidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78d37580-56fe-4c39-9224-0d1939c86eb7"/>
+		</element>
+		<element kind="staticText" uuid="a049aabb-3ee8-4790-a781-6920d4ac971b" x="333" y="0" width="111" height="30" fontSize="14.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[Salario]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f7a5572-f9d0-40bc-97f3-dd2116d2335d"/>
+		</element>
+		<element kind="staticText" uuid="30b3231c-bf89-4d4d-acd0-14dbb3bf9b99" x="444" y="0" width="111" height="30" fontSize="14.0" underline="true" bold="true" hTextAlign="Center">
+			<text><![CDATA[SalNeto]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="754db84a-d77b-47a0-bf7f-1d542f6f4d54"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<element kind="textField" uuid="4436815e-ab58-4a2e-b0d1-70a3223a031a" x="0" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f4f7bc1-3916-4c73-ac1e-63919fa67b35"/>
+			</element>
+			<element kind="textField" uuid="0215ae28-0bed-4137-8af8-743f16539191" x="111" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Apellidos}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="846f5177-ba11-4da2-9119-2ab5d69955c4"/>
+			</element>
+			<element kind="textField" uuid="8ca2b850-c406-472a-b6a2-d9f4ac7f1eb8" x="222" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{Localidad}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78d37580-56fe-4c39-9224-0d1939c86eb7"/>
+			</element>
+			<element kind="textField" uuid="ed92c875-d503-485b-96c4-ec91d4bb7b78" x="333" y="0" width="111" height="30" fontSize="12.0" pattern="#,000.00 €" hTextAlign="Center">
+				<expression><![CDATA[$F{Salario}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f7a5572-f9d0-40bc-97f3-dd2116d2335d"/>
+			</element>
+			<element kind="textField" uuid="fc29eebd-2710-4995-aa2f-7dd330a63c75" x="444" y="0" width="111" height="30" fontSize="12.0" pattern="#,000.00 €" hTextAlign="Center">
+				<expression><![CDATA[$F{SalNeto}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="754db84a-d77b-47a0-bf7f-1d542f6f4d54"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
